@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* .은 class에 대한 선택자 (90% 이상 사용용) */
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: antiquewhite;
+            border: 1px solid black;
+        }
+
+        /* 모든 div 태그에 스타일을 적용한다면 (비추천) */
+        div {
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        /* 모든 img 태그에 width를 적용한다면 (비추천) */
+        img {
+            width: 300px;
+        }
+
+        body {
+            background-color: black;
+        }
+
+        /* id가 text인 태그에 스타일 적용 */
+        #text {
+            color: white;
+        }
+
+        /* 모든 태그에 대해 스타일 적용 */
+        /* 각 태그의 기본 마진, 패딩을 제거하는데는 많이 사용 */
+        *{
+            margin: 0;   /* 태그 외부 여백 */
+            padding: 0;  /* 태그 내부 여백 */
+        }
+
+        .bg-red {
+            background-color: red;
+        }
+
+        /* 특정 태그의 특정 속성을 선택해서 스타일 부여 */
+        /* type="email" 인 input 에 스타일 부여 */
+        input[type=email] {
+            background-color: yellow;
+        }
+
+        input[name=inputPW] {
+            background-color: pink;
+        }
+
+        .card {
+            width: 300px;
+            background-color: white;
+        }
+
+        /* card 클래스 내부 p태그에 스타일 적용 */
+        .card p {
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box">텍스트</div>
+
+    <img src="dog.jpg" alt="">
+    <img src="images/강아지.jpeg" alt="">
+
+    <!-- h1이 가장 글자가 크고, h6이 가장 글자가 작음 -->
+    <h3 id="text">크리스마스 이브</h3>
+
+    <input type="text" class="bg-red">
+    <!-- 태그의 id 속성의 값은 전체 html 문서 내에서 중복돼선 안 된다다 -->
+    <input type="email" name="inputEmail" id="text">
+    <input type="password" name="inputPW" id="">
+
+    <div class="card">
+        <div>
+            <img src="https://image.ajunews.com/content/image/2020/12/23/20201223143808658440.png" alt="">
+        </div>
+        <div>
+            <p>크리스마스 이브</p>
+        </div>
+    </div>
+
+</body>
+</html>
